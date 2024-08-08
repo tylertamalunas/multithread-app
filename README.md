@@ -26,7 +26,7 @@
 
 
 ### 2.  Modify the front end to display the price for a reservation in currency rates for U.S. dollars ($), Canadian dollars (C$), and euros (€) on different lines.
-
+- 
 
 Note: It is not necessary to convert the values of the prices.
 
