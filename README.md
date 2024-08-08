@@ -28,12 +28,11 @@
 ### 2.  Modify the front end to display the price for a reservation in currency rates for U.S. dollars ($), Canadian dollars (C$), and euros (€) on different lines.
 - app.component.html, line 82-83: added 2 more prices and used currency pipe syntax to convert currencies.
 
-Note: It is not necessary to convert the values of the prices.
-
 
 ### 3.  Display the time for an online live presentation held at the Landon Hotel by doing the following:
-
 #### a.  Write a Java method to convert times between eastern time (ET), mountain time (MT), and coordinated universal time (UTC) zones.
+- created TimeController.java
+- TimeController.java, Lines 18-42: store a method for converting times
 
 #### b.  Use the time zone conversion method from part B3a to display a message stating the time in all three times zones in hours and minutes for an online, live presentation held at the Landon Hotel. The times should be displayed as ET, MT, and UTC.
 
