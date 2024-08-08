@@ -28,6 +28,7 @@ export class AppComponent implements OnInit{
   currentCheckInVal!:string;
   currentCheckOutVal!:string;
   message!: Observable<string>;
+  timezones!: Observable<string>
 
 
     ngOnInit(){
@@ -35,7 +36,8 @@ export class AppComponent implements OnInit{
       // displays french and english message
       this.message = this.httpClient.get(this.baseURL + '/api/message', {responseType: 'text'});
 
-
+      // shows timezones
+      this.timezones = this.httpClient.get(this.baseURL + '/api/timezones', {responseType: 'text'});
 
 
       this.roomsearch= new FormGroup({

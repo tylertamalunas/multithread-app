@@ -32,7 +32,9 @@
 ### 3.  Display the time for an online live presentation held at the Landon Hotel by doing the following:
 #### a.  Write a Java method to convert times between eastern time (ET), mountain time (MT), and coordinated universal time (UTC) zones.
 - created TimeController.java
-- TimeController.java, Lines 18-42: store a method for converting times
+- TimeController.java, Lines 17-42: store a method for converting times
+- app.component.ts, lines 31,40: call to controller to show timezones
+- app.component.html, lines 28-31: added where to display timezones 
 
 #### b.  Use the time zone conversion method from part B3a to display a message stating the time in all three times zones in hours and minutes for an online, live presentation held at the Landon Hotel. The times should be displayed as ET, MT, and UTC.
 

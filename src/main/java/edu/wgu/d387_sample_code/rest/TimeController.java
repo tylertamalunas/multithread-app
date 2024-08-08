@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.time.LocalDateTime;
 import java.time.ZoneId;
 import java.time.ZonedDateTime;
+import java.time.format.DateTimeFormatter;
 
 @RestController
 @CrossOrigin("http://localhost:4200")
@@ -20,25 +21,23 @@ public class TimeController {
         ZoneId zEastern = ZoneId.of("America/New_York");
         ZoneId zMountain = ZoneId.of("America/Denver");
         ZoneId zUniversal = ZoneId.of("Etc/GMT");
-        ZoneId zDefault = ZoneId.systemDefault();
+        ZoneId zDefault = ZoneId.of("America/Chicago");
+        ZonedDateTime zonedDateTimeDefault = ZonedDateTime.of(LocalDateTime.of(2024 ,8,7,10,0), zDefault);
 
-        // Local Time
-        LocalDateTime localDateTime = LocalDateTime.now();
-        System.out.println("local Time: " + localDateTime.now());
-        ZonedDateTime zonedDateTime = localDateTime.atZone(zDefault);
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("HH:mm");
+
         // Eastern Time
-        ZonedDateTime zonedDateTimeEastern = zonedDateTime.withZoneSameInstant(zEastern);
+        ZonedDateTime zonedDateTimeEastern = zonedDateTimeDefault.withZoneSameInstant(zEastern);
         LocalDateTime localDateTimeEastern = zonedDateTimeEastern.toLocalDateTime();
-        System.out.println("Eastern time: " + localDateTimeEastern.toString());
         // Mountain Time
-        ZonedDateTime zonedDateTimeMountain = zonedDateTime.withZoneSameInstant(zMountain);
+        ZonedDateTime zonedDateTimeMountain = zonedDateTimeDefault.withZoneSameInstant(zMountain);
         LocalDateTime localDateTimeMountain = zonedDateTimeMountain.toLocalDateTime();
-        System.out.println("Mountain time: " + localDateTimeMountain.toString());
         // UTC time
-        ZonedDateTime zonedDateTimeUniversal = zonedDateTime.withZoneSameInstant(zUniversal);
+        ZonedDateTime zonedDateTimeUniversal = zonedDateTimeDefault.withZoneSameInstant(zUniversal);
         LocalDateTime localDateTimeUniversal = zonedDateTimeUniversal.toLocalDateTime();
-        System.out.println("Universal time: " + localDateTimeUniversal.toString());
 
-        return localDateTimeUniversal.toString() + " " + localDateTimeMountain.toString() + " " + localDateTimeEastern.toString();
+        return "UTC: " + localDateTimeUniversal.format(formatter) + "<br/>" +
+                "MT:" + localDateTimeMountain.format(formatter) + "<br/>" +
+                "ET:" + localDateTimeEastern.format(formatter);
     }
 }
