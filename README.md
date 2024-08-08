@@ -26,7 +26,7 @@
 
 
 ### 2.  Modify the front end to display the price for a reservation in currency rates for U.S. dollars ($), Canadian dollars (C$), and euros (€) on different lines.
-- 
+- app.component.html, line 82-83: added 2 more prices and used currency pipe syntax to convert currencies.
 
 Note: It is not necessary to convert the values of the prices.
 
