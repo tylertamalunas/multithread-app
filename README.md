@@ -6,32 +6,23 @@
 
 ## A.  Create your subgroup and project in GitLab using the provided web link and the "GitLab How-To" web link by doing the following:
 
-•   Clone the project to the IDE.
-
-•   Commit with a message and push when you complete each requirement listed in parts B1, B2, B3, and C1.
-
-
-Note: You may commit and push whenever you want to back up your changes, even if a requirement is not yet complete.
-
-
-•   Submit a copy of the GitLab repository URL in the "Comments to Evaluator" section when you submit this assessment.
-
-•   Submit a copy of the repository branch history retrieved from your repository, which must include the commit messages and dates.
-
-Note: Wait until you have completed all the following prompts before you create your copy of the repository branch history.
-
-
 ## B.  Modify the Landon Hotel scheduling application for localization and internationalization by doing the following:
 
 ### <t> 1.   Install the Landon Hotel scheduling application in your integrated development environment (IDE). Modify the Java classes of application to display a welcome message by doing the following:
 
 #### a.  Build resource bundles for both English and French (languages required by Canadian law). Include a welcome message in the language resource bundles.
-- created both language packs<br>
+- created both language resource packs<br>
+
 
 
 #### b.  Display the welcome message in both English and French by applying the resource bundles using a different thread for each language.
-- added executorservice to samplecodeapplication file to enable multithreading
-- 
+- created controller MessageController.java<br>
+- MessageController.java, line 9-31: Added method to show message on front end with multiple threads<br>
+- app.component.ts, line 30: added message variable<br>
+- app.component.ts, line 35-36: added code to display the message from controller<br>
+- app.component.html, line 22-25: Added div to display message on front end<br>
+- created DisplayMessage.java 
+- DisplayMessage.java, line 6-24: retrieve messages from the resource bundles
 
 
 ### 2.  Modify the front end to display the price for a reservation in currency rates for U.S. dollars ($), Canadian dollars (C$), and euros (€) on different lines.

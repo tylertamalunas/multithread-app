@@ -27,8 +27,17 @@ export class AppComponent implements OnInit{
   request!:ReserveRoomRequest;
   currentCheckInVal!:string;
   currentCheckOutVal!:string;
+  message!: Observable<string>;
+
 
     ngOnInit(){
+
+      // displays french and english message
+      this.message = this.httpClient.get(this.baseURL + '/api/message', {responseType: 'text'});
+
+
+
+
       this.roomsearch= new FormGroup({
         checkin: new FormControl(' '),
         checkout: new FormControl(' ')
