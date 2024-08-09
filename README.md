@@ -44,12 +44,12 @@
 ### 1.  Build the Dockerfile to create a single image that includes all code, including modifications made in parts B1 to B3. Commit and push the final Dockerfile to GitLab.
 - created Dockerfile. Ran mvn clean install command to get .jar file name
 ### 2.  Test the Dockerfile by doing the following:
-
 •   Create a Docker image of the current multithreaded Spring application.
-
 •   Run the Docker image in a container and give the container a name that includes D387_[student ID].
-
 •   Submit a screenshot capture of the running application with evidence it is running in the container.
+
+- created docker image and ran in container
+- attached screenshot under main project folder, d387_docker_running.png
 
 ### 3.  Describe how you would deploy the current multithreaded Spring application to the cloud. Include the name of the cloud service provider you would use.
 
